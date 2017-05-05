@@ -1,40 +1,53 @@
-# javascript-koans
-Based on Edgecase's fantastic 
-[Ruby koans](http://github.com/edgecase/ruby_koans), the goal of the
-Javascript koans is to teach you Javascript programming through
-testing.
+# javascript-koans-esl
+This is mrdavidlaing's JavaScript Koans but with simple English. The Buddhist, vague language has been mostly replaced with simple English and set-up instructions are added for complete beginners.
 
-When you first run the koans, you'll be presented with a runtime error and a
-stack trace indicating where the error occurred. Your goal is to make the
-error go away. As you fix each error, you should learn something about the
-Javascript language and functional programming in general.
+Javascript koans is to teach you JavaScript programming through testing. When you first run the koans, you will be given a 'runtime error' and a 'stack trace' indicating where the error occured.
 
-Your journey towards Javascript enlightenment starts in the koans/AboutExpects.js file. These
-koans will be very simple, so don't overthink them! As you progress through
-more koans, more and more Javascript syntax will be introduced which will allow
-you to solve more complicated problems and use more advanced techniques.
+Your goal is to find and fix the error.
 
-## Running the Koans
-Simply navigate to the Javascript Koans folder using a file browser, and
-double click on KoansRunnner.html. 
+Through exploring the code and fixing the errors, you will learn new things about the JavaScript language and functional programming.
 
-Any browser will do, but for the best results Firefox or Chrome is
-recommended. More stack trace information shows up for javascript on these
-browsers.
+#### What are koans?
+> A koan is a riddle or puzzle that Zen Buddhists use during meditation to help them unravel greater truths about the world and about themselves.
 
-The first error will be in koans/AboutExpects.js. Fix the first test and
-refresh the browser. Rinse and repeat until all tests turn green.
+[source](http://www.huffingtonpost.com/entry/zen-buddhism-koan_us_563251dce4b0631799115f3c)
 
-The test runner used is [Jasmine](http://jasmine.github.io/) with a customized report viewer.
+## Setting Up
 
-### Changelog
-*  v3 - Nov 2010  - Moved out of branch of functional-koans project, into own top level project
-*  v2 - Sept 2010 - Second version based on jasmine (Thanks Greg Malcolm!)
-*  v1 - July 2010 - First version based on jsTestDriver
+### Download Using Git
+If you know git:
 
-### Acknowledgements
-*  Dick Wall (the Java posse) - for bringing the idea of koans to my attention
-*  Edgecase - for the great Ruby Koans
-*  Douglas Crockford - for Javascript; the good bits
+```code
+git clone https://github.com/yanarchy/javascript-koans-esl.git
+```
 
-### [MIT Licensed](LICENSE)
+### Download Without Git
+If you do not know git, please download the zip and unzip on your computer.
+![download zip image](readme-images/downloadzip.png)
+
+### Open in Text Editor
+If you do not have a text editor for JavaScript, I highly recommend downloading and installing [Sublime Text](https://www.sublimetext.com/3) or [Atom](https://atom.io/).
+
+Open this `javascript-koans-esl project` folder in your text editor.
+
+## How to Start
+
+1. Open the `KoansRunner.html` file in the browser (for example, Chrome or Firefox).
+2. The first error will be in `koans/AboutExpects.js`.
+![first error in html file](readme-images/firsterror.png)
+
+3. Fix the first test in the `koans/AboutExpects.js` file and save it.
+
+4. Refresh the `KoansRunner.html` page you have open in the browser.
+
+5. Repeat! Fix a test, save the file, refresh the browser. Tests will turn green when they are correct.
+
+## Tips
+
+Do not think too much about each problem--they are simple, especially in the beginning.
+
+## Other Information
+
+Is there anything that needs to be explained in simpler English? Let me know.
+
+The test runner used is [Jasmine](http://jasmine.github.io/) with a customized report viewer. Understanding Jasmine is not important for finishing this.
