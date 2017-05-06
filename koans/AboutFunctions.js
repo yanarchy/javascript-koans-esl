@@ -9,7 +9,8 @@ describe("About Functions", function() {
     expect(add(1, 2)).toBe(FILL_ME_IN);
   });
 
-  it("should know internal variables override outer variables", function () {
+  it("should know inner variables override outer variables", function () {
+
     var message = "Outer";
 
     function getMessage() {
@@ -26,6 +27,7 @@ describe("About Functions", function() {
     expect(message).toBe(FILL_ME_IN);
   });
 
+  // JavaScript has a rule called 'lexical scoping'. Let's learn about it.
   it("should have lexical scoping", function () {
     var variable = "top-level";
     function parentfunction() {
@@ -38,12 +40,10 @@ describe("About Functions", function() {
     expect(parentfunction()).toBe(FILL_ME_IN);
   });
 
-  it("should use lexical scoping to synthesise functions", function () {
+  it("should use lexical scoping to create new functions", function () {
 
-    function makeMysteryFunction(makerValue)
-    {
-      var newFunction = function doMysteriousThing(param)
-      {
+    function makeMysteryFunction(makerValue) {
+      var newFunction = function doMysteriousThing(param) {
         return makerValue + param;
       };
       return newFunction;
@@ -55,8 +55,9 @@ describe("About Functions", function() {
     expect(mysteryFunction3(10) + mysteryFunction5(5)).toBe(FILL_ME_IN);
   });
 
-  it("should allow extra function arguments", function () {
+  it("should allow for more than one function argument", function () {
 
+    // You can write functions to take in more than one argument (aka parameter).
     function returnFirstArg(firstArg) {
       return firstArg;
     }

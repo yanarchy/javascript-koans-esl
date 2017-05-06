@@ -2,7 +2,9 @@ describe("About Arrays", function() {
 
   it("should create arrays", function() {
     var emptyArray = [];
-    expect(typeof(emptyArray)).toBe(FILL_ME_IN); //A mistake? - http://javascript.crockford.com/remedial.html
+
+    // Learn about data types in JavaScript
+    expect(typeof(emptyArray)).toBe(FILL_ME_IN); //A mistake? - https://www.w3schools.com/js/js_datatypes.asp
     expect(emptyArray.length).toBe(FILL_ME_IN);
 
     var multiTypeArray = [0, 1, "two", function () { return 3; }, {value1: 4, value2: 5}, [6, 7]];
@@ -14,7 +16,17 @@ describe("About Arrays", function() {
     expect(multiTypeArray[5][0]).toBe(FILL_ME_IN);
   });
 
+  /* 
+    An array literal is a list of zero or more expressions. Each expression represents an element in the array.
+    An array is enclosed in square brackets ([]).
+
+    When you create an array using an array literal, it is initialized with the specified values as its
+    elements, and its length is set to the number of arguments specified.
+  */
+
   it("should understand array literals", function () {
+
+    // The below line is an array literal
     var array = [];
     expect(array).toEqual([]);
 

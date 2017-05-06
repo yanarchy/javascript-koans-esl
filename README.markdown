@@ -1,5 +1,5 @@
 # javascript-koans-esl
-This is mrdavidlaing's JavaScript Koans but with simple English. The Buddhist, vague language has been mostly replaced with simple English and set-up instructions are added for complete beginners.
+This is [mrdavidlaing's JavaScript Koans](https://github.com/mrdavidlaing/javascript-koans), but with simple English. The vague Buddhist language in the original has been replaced with simple English. Set-up instructions are also added for complete beginners.
 
 Javascript koans is to teach you JavaScript programming through testing. When you first run the koans, you will be given a 'runtime error' and a 'stack trace' indicating where the error occured.
 
@@ -44,7 +44,17 @@ Open this `javascript-koans-esl project` folder in your text editor.
 
 ## Tips
 
-Do not think too much about each problem--they are simple, especially in the beginning.
+* Do not think too much about each problem--they are simple, especially in the beginning.
+* Are you really stuck on something? You can disable a test by adding an 'x' to the beginning of 'it(...)'. If you do this, the KoansRunner will skip this particular test and go on to the next. Remember to come back to the tests that you disable!
+
+```code
+  xit('should be disabled', function () {
+    // This is an example
+  });
+```
+
+* Don't be afraid to Google
+* Don't be afraid to make mistakes
 
 ## Other Information
 

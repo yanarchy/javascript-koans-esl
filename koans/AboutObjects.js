@@ -1,24 +1,24 @@
 describe("About Objects", function () {
 
   describe("Properties", function () {
-    var megalomaniac;
+    var villains;
 
     beforeEach(function () {
-       megalomaniac = {  mastermind: "Joker", henchwoman: "Harley" };
+       villains = {  mastermind: "Joker", henchwoman: "Harley" };
     });
 
-    it("should confirm objects are collections of properties", function () {
-      expect(megalomaniac.mastermind).toBe(FILL_ME_IN);
+    it("should confirm that objects are collections of properties", function () {
+      expect(villains.mastermind).toBe(FILL_ME_IN);
     });
 
     it("should confirm that properties are case sensitive", function () {
-      expect(megalomaniac.henchwoman).toBe(FILL_ME_IN);
-      expect(megalomaniac.henchWoman).toBe(FILL_ME_IN);
+      expect(villains.henchwoman).toBe(FILL_ME_IN);
+      expect(villains.henchWoman).toBe(FILL_ME_IN);
     });
   });
 
 
-  it("should know properties that are functions act like methods", function () {
+  it("should know that functions in objects are called methods", function () {
     var megalomaniac = {
       mastermind : "Brain",
       henchman: "Pinky",
@@ -53,7 +53,7 @@ describe("About Objects", function () {
     beforeEach(function () {
       megalomaniac = {
         mastermind: "The Monarch",
-        henchwoman: "Dr Girlfriend",
+        henchwoman: "Dr. Girlfriend",
         theBomb: true
       };
     });
@@ -87,8 +87,7 @@ describe("About Objects", function () {
 
 
   it("should use prototype to add to all objects", function () {
-      function Circle(radius)
-      {
+      function Circle(radius) {
         this.radius = radius;
       }
 

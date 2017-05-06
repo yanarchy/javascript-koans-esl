@@ -2,7 +2,7 @@ function Muppet(age, hobby) {
   this.age = age;
   this.hobby = hobby;
 
-  this.answerNanny = function(){
+  this.answerNanny = function() {
 	return "Everything's cool!";
   }
 }
@@ -19,9 +19,9 @@ function SwedishChef(age, hobby, mood) {
 SwedishChef.prototype = new Muppet();
 
 describe("About inheritance", function() {
-  beforeEach(function(){
+  beforeEach(function() {
     this.muppet = new Muppet(2, "coding");
-	this.swedishChef = new SwedishChef(2, "cooking", "chillin");
+    this.swedishChef = new SwedishChef(2, "cooking", "chillin");
   });
 
   it("should be able to call a method on the derived object", function() {
@@ -62,8 +62,8 @@ function Gonzo(age, hobby, trick) {
 Gonzo.prototype = Muppet.prototype.beget();
 
 describe("About Crockford's inheritance improvement", function() {
-  beforeEach(function(){
-  this.gonzo = new Gonzo(3, "daredevil performer", "eat a tire");
+  beforeEach(function() {
+    this.gonzo = new Gonzo(3, "daredevil performer", "eat a tire");
   });
 
   it("should be able to call a method on the derived object", function() {
