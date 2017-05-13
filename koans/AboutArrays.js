@@ -6,7 +6,9 @@ describe("About Arrays", function() {
     // Learn about data types in JavaScript
     expect(typeof(emptyArray)).toBe(FILL_ME_IN); //A mistake? - https://www.w3schools.com/js/js_datatypes.asp
     expect(emptyArray.length).toBe(FILL_ME_IN);
+  });
 
+  it("should understand how to access elements in arrays", function () {
     var multiTypeArray = [0, 1, "two", function () { return 3; }, {value1: 4, value2: 5}, [6, 7]];
     expect(multiTypeArray[0]).toBe(FILL_ME_IN);
     expect(multiTypeArray[2]).toBe(FILL_ME_IN);
@@ -15,6 +17,7 @@ describe("About Arrays", function() {
     expect(multiTypeArray[4]["value2"]).toBe(FILL_ME_IN);
     expect(multiTypeArray[5][0]).toBe(FILL_ME_IN);
   });
+
 
   /* 
     An array literal is a list of zero or more expressions. Each expression represents an element in the array.

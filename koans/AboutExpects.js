@@ -1,6 +1,6 @@
 describe('About Expects', function() {
 
-  // These are tests. In programming, we also called them 'specs'.
+  // These are tests. In programming, we also call them 'specs'.
   // Specs are expectations of what is true.
   it('should expect true', function() {
 
