@@ -201,10 +201,10 @@ h1 {
   text-decoration: none;
 }
 
-.enlightenment-passed {
+.success-passed {
   color: #990;
   font-weight: bold;
 }
-.enlightenment-failed {
+.success-failed {
   color: #550;
 }
