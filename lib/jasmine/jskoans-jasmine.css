@@ -1,5 +1,6 @@
 body {
-  font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+  font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial",
+    sans-serif;
 }
 
 h1 {
@@ -8,18 +9,21 @@ h1 {
   color: #78f;
 }
 
-.jasmine_reporter a:visited, .jasmine_reporter a {
-  color: #303; 
+.jasmine_reporter a:visited,
+.jasmine_reporter a {
+  color: #303;
 }
 
-.jasmine_reporter a:hover, .jasmine_reporter a:active {
-  color: blue; 
+.jasmine_reporter a:hover,
+.jasmine_reporter a:active {
+  color: blue;
 }
 
-.run_spec_failed, .run_spec_skipped {
-  float:right;
+.run_spec_failed,
+.run_spec_skipped {
+  float: right;
   padding-right: 5px;
-  font-size: .8em;
+  font-size: 0.8em;
   text-decoration: none;
 }
 
@@ -61,14 +65,16 @@ h1 {
 }
 
 .suite .suite {
-  margin: 5px; 
+  margin: 5px;
 }
 
-.suite.passed, .suite.passed-skipped {
+.suite.passed,
+.suite.passed-skipped {
   background-color: #dfd;
 }
 
-.suite.failed, .suite.failed-skipped {
+.suite.failed,
+.suite.failed-skipped {
   background-color: #fdd;
 }
 
@@ -78,17 +84,22 @@ h1 {
   clear: both;
 }
 
-.spec.failed, .spec.passed, .spec.passed-skipped, .spec.failed-skipped {
+.spec.failed,
+.spec.passed,
+.spec.passed-skipped,
+.spec.failed-skipped {
   padding-bottom: 5px;
   border: 1px solid gray;
 }
 
-.spec.failed, .spec.failed-skipped {
+.spec.failed,
+.spec.failed-skipped {
   background-color: #fbb;
   border-color: red;
 }
 
-.spec.passed, .spec.passed-skipped {
+.spec.passed,
+.spec.passed-skipped {
   background-color: #bfb;
   border-color: green;
 }
@@ -98,10 +109,11 @@ h1 {
 }
 
 .errorMessage {
-  font-family: "Menlo", "Monaco", "Andale Mono", "Courier New", "Courier", sans-serif; 
+  font-family: "Menlo", "Monaco", "Andale Mono", "Courier New", "Courier",
+    sans-serif;
   color: #055;
   white-space: pre;
-  padding: .2em 1em;
+  padding: 0.2em 1em;
   margin-left: 10px;
   margin-right: 5px;
   margin-bottom: 10px;
@@ -122,9 +134,10 @@ h1 {
   display: block;
 }
 
-.passed-skipped, .failed-skipped {
-   display: none;
-}   
+.passed-skipped,
+.failed-skipped {
+  display: none;
+}
 
 .resultMessage span.result {
   display: block;
@@ -138,7 +151,7 @@ h1 {
 
 .stackTrace {
   white-space: pre;
-  font-size: .8em;
+  font-size: 0.8em;
   margin-left: 10px;
   margin-right: 5px;
   max-height: 5em;
@@ -151,7 +164,7 @@ h1 {
 
 .finished-at {
   padding-left: 1em;
-  font-size: .6em;
+  font-size: 0.6em;
 }
 
 .show-skipped .passed-skipped {
@@ -170,7 +183,7 @@ h1 {
 }
 
 #jasmine_content {
-  position:fixed;
+  position: fixed;
   right: 100%;
 }
 
@@ -185,7 +198,7 @@ h1 {
 }
 
 .completion {
-  font-size: .9em;
+  font-size: 0.9em;
   padding-top: 10px;
 }
 
