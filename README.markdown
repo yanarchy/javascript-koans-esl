@@ -1,6 +1,6 @@
 # javascript-koans-esl
 
-This is [mrdavidlaing's JavaScript Koans](https://github.com/mrdavidlaing/javascript-koans), but with simple English. The vague Buddhist language in the original has been replaced with simple English. Setup instructions are also added for complete beginners.
+This is [mrdavidlaing's JavaScript Koans](https://github.com/mrdavidlaing/javascript-koans), but with simple English, and refactored to use a more modern version of JavaScript. The vague Buddhist language in the original has been replaced with simple English. Setup instructions are also added for complete beginners.
 
 Javascript koans are to teach you JavaScript programming through testing. When you first run the koans, you will be given a 'runtime error' and a 'stack trace' indicating where the error occurred.
 
