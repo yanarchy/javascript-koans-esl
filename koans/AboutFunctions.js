@@ -72,9 +72,9 @@ describe("About Functions", () => {
   });
 
   it("should pass functions as values", () => {
-    const appendRules = (name) => name + " rules!";
+    const appendRules = (name) => `${name} rules!`;
 
-    const appendDoubleRules = (name) => name + " totally rules!";
+    const appendDoubleRules = (name) => `${name} totally rules!`;
 
     const praiseSinger = { givePraise: appendRules };
     expect(praiseSinger.givePraise("John")).toBe(FILL_ME_IN);
