@@ -1,7 +1,5 @@
-describe("About Functions", function() {
-
-  it("should declare functions", function() {
-
+describe("About Functions", () => {
+  it("should declare functions", () => {
     function add(a, b) {
       return a + b;
     }
@@ -9,16 +7,15 @@ describe("About Functions", function() {
     expect(add(1, 2)).toBe(FILL_ME_IN);
   });
 
-  it("should know inner variables override outer variables", function () {
-
-    var message = "Outer";
+  it("should know inner variables override outer variables", () => {
+    const message = "Outer";
 
     function getMessage() {
       return message;
     }
 
     function overrideMessage() {
-      var message = "Inner";
+      const message = "Inner";
       return message;
     }
 
@@ -28,10 +25,10 @@ describe("About Functions", function() {
   });
 
   // JavaScript has a rule called 'lexical scoping'. Let's learn about it.
-  it("should have lexical scoping", function () {
-    var variable = "top-level";
+  it("should have lexical scoping", () => {
+    const variable = "top-level";
     function parentfunction() {
-      var variable = "local";
+      const variable = "local";
       function childfunction() {
         return variable;
       }
@@ -40,23 +37,20 @@ describe("About Functions", function() {
     expect(parentfunction()).toBe(FILL_ME_IN);
   });
 
-  it("should use lexical scoping to create new functions", function () {
-
+  it("should use lexical scoping to create new functions", () => {
     function makeMysteryFunction(makerValue) {
-      var newFunction = function doMysteriousThing(param) {
+      return function doMysteriousThing(param) {
         return makerValue + param;
       };
-      return newFunction;
     }
 
-    var mysteryFunction3 = makeMysteryFunction(3);
-    var mysteryFunction5 = makeMysteryFunction(5);
+    const mysteryFunction3 = makeMysteryFunction(3);
+    const mysteryFunction5 = makeMysteryFunction(5);
 
     expect(mysteryFunction3(10) + mysteryFunction5(5)).toBe(FILL_ME_IN);
   });
 
-  it("should allow for more than one function argument", function () {
-
+  it("should allow for more than one function argument", () => {
     // You can write functions to take in more than one argument (aka parameter).
     function returnFirstArg(firstArg) {
       return firstArg;
@@ -70,32 +64,22 @@ describe("About Functions", function() {
 
     expect(returnSecondArg("only give first arg")).toBe(FILL_ME_IN);
 
-    function returnAllArgs() {
-      var argsArray = [];
-      for (var i = 0; i < arguments.length; i += 1) {
-        argsArray.push(arguments[i]);
-      }
+    function returnAllArgs(...argsArray) {
       return argsArray.join(",");
     }
 
     expect(returnAllArgs("first", "second", "third")).toBe(FILL_ME_IN);
   });
 
-  it("should pass functions as values", function () {
+  it("should pass functions as values", () => {
+    const appendRules = (name) => `${name} rules!`;
 
-    var appendRules = function (name) {
-      return name + " rules!";
-    };
+    const appendDoubleRules = (name) => `${name} totally rules!`;
 
-    var appendDoubleRules = function (name) {
-      return name + " totally rules!";
-    };
-
-    var praiseSinger = { givePraise: appendRules };
+    const praiseSinger = { givePraise: appendRules };
     expect(praiseSinger.givePraise("John")).toBe(FILL_ME_IN);
 
     praiseSinger.givePraise = appendDoubleRules;
     expect(praiseSinger.givePraise("Mary")).toBe(FILL_ME_IN);
-
   });
 });

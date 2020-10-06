@@ -1,63 +1,69 @@
 // For beginners, this section jumps deeper into JavaScript and will require a bit more Googling.
-describe("About Mutability", function() {
+describe("About Mutability", () => {
   /*
     What does 'Mutability' mean? What does it mean for something to be 'mutable'? 
     Mutable is a type of variable that can be changed. Let's discover what the rules of mutability
     are in JavaScript
   */
-  it("should expect object properties to be public and mutable", function () {
-    var aPerson = { firstname: "John", lastname: "Smith" };
-    aPerson.firstname = "Alan";
+  it("should expect object properties to be public and mutable", () => {
+    const aPerson = { firstName: "John", lastName: "Smith" };
+    aPerson.firstName = "Alan";
 
-    expect(aPerson.firstname).toBe(FILL_ME_IN);
+    expect(aPerson.firstName).toBe(FILL_ME_IN);
   });
 
-  it("should understand that constructed properties are public and mutable", function () {
-    function Person(firstname, lastname) {
-      // Waaaahhh! What is this? Try to see if you can fix this error without fully understanding 'this' first.
-      this.firstname = firstname;
-      this.lastname = lastname;
+  it("should understand that constructed properties are public and mutable", () => {
+    class Person {
+      constructor(firstName, lastName) {
+        // Waaaahhh! What is this? Try to see if you can complete this koan without fully understanding 'this' first.
+        this.firstName = firstName;
+        this.lastName = lastName;
+      }
     }
 
-    var aPerson = new Person ("John", "Smith");
-    aPerson.firstname = "Alan";
+    const aPerson = new Person("John", "Smith");
+    aPerson.firstName = "Alan";
 
-    expect(aPerson.firstname).toBe(FILL_ME_IN);
+    expect(aPerson.firstName).toBe(FILL_ME_IN);
   });
 
   // What is a prototype in JavaScript?
-  it("should expect prototype properties to be public and mutable", function () {
-    function Person(firstname, lastname) {
-      this.firstname = firstname;
-      this.lastname = lastname;
-    }
-    Person.prototype.getFullName = function () {
-      return this.firstname + " " + this.lastname;
-    };
+  it("should expect prototype properties to be public and mutable", () => {
+    class Person {
+      constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+      }
 
-    var aPerson = new Person ("John", "Smith");
+      getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+      }
+    }
+
+    const aPerson = new Person("John", "Smith");
     expect(aPerson.getFullName()).toBe(FILL_ME_IN);
 
     aPerson.getFullName = function () {
-      return this.lastname + ", " + this.firstname;
+      return `${this.lastName}, ${this.firstName}`;
     };
 
     expect(aPerson.getFullName()).toBe(FILL_ME_IN);
   });
 
   // What is a constructor? What do you think it does?
-  it("should know that variables inside a constructor and constructor arguments are private", function () {
-    function Person(firstname, lastname) {
-      var fullName = firstname + " " + lastname;
-
-      this.getFirstName = function () { return firstname; };
-      this.getLastName = function () { return lastname; };
-      this.getFullName = function () { return fullName; };
+  it("should know that variables inside a constructor and constructor arguments are private", () => {
+    class Person {
+      constructor(firstName, lastName) {
+        const fullName = `${firstName} ${lastName}`;
+        this.getFirstName = () => firstName;
+        this.getLastName = () => lastName;
+        this.getFullName = () => fullName;
+      }
     }
-    var aPerson = new Person ("John", "Smith");
+    const aPerson = new Person("John", "Smith");
 
-    aPerson.firstname = "Penny";
-    aPerson.lastname = "Andrews";
+    aPerson.firstName = "Penny";
+    aPerson.lastName = "Andrews";
     aPerson.fullName = "Penny Andrews";
 
     expect(aPerson.getFirstName()).toBe(FILL_ME_IN);
@@ -65,10 +71,9 @@ describe("About Mutability", function() {
     expect(aPerson.getFullName()).toBe(FILL_ME_IN);
 
     aPerson.getFullName = function () {
-      return aPerson.lastname + ", " + aPerson.firstname;
+      return `${aPerson.lastName}, ${aPerson.firstName}`;
     };
 
     expect(aPerson.getFullName()).toBe(FILL_ME_IN);
   });
-
 });
